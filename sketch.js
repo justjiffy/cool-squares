@@ -57,24 +57,29 @@ function draw() {
 }
 
 //movement logic for player
-function keyPressed() {
-  if (key == "w" || keyCode == UP_ARROW) {
-    player.y -= speed;
-  }
-  if (key == "s" || keyCode == DOWN_ARROW) {
-    player.y += speed;
-  }
-  if (key == "d" || keyCode == RIGHT_ARROW) {
-    player.x += speed;
-  }
-  if (key == "a" || keyCode == LEFT_ARROW) {
-    player.x -= speed;
-  }
-}
+// function keyPressed() {
+//   if (key == "w" || keyCode == UP_ARROW) {
+//     player.y -= speed;
+//   }
+//   if (key == "s" || keyCode == DOWN_ARROW) {
+//     player.y += speed;
+//   }
+//   if (key == "d" || keyCode == RIGHT_ARROW) {
+//     player.x += speed;
+//   }
+//   if (key == "a" || keyCode == LEFT_ARROW) {
+//     player.x -= speed;
+//   }
+//}
 
 
 //make mobile/keyboardless friendly
 function mouseMoved() {
+  player.x = mouseX
+  player.y = mouseY;
+}
+
+function mouseDragged() {
   player.x = mouseX
   player.y = mouseY;
 }
